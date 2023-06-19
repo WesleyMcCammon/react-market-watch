@@ -4,8 +4,6 @@ import MarketWatchInstrument from './MarketWatchInstrument';
 const MarketWatch = (props) => {
     const [message, setMessage] = useState('');
 
-    console.log('reload');
-
     useEffect(() => {
         const start = () => {
             const events = new EventSource('http://localhost:3700/events', { withCredentials: false });
@@ -21,7 +19,7 @@ const MarketWatch = (props) => {
 
 
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: '75fr 25fr' }}>
+        <div style={{ display: 'grid' }}>
             <div style={{ textAlign: 'left', padding: '4px' }}>
                 <div style={{ fontSize: '1.2em', padding: '0px 0px 0px 10px' }}>Market Watch</div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '4px', margin: '4px' }}>
@@ -30,9 +28,9 @@ const MarketWatch = (props) => {
                     ))}
                 </div>
             </div>
-            <div style={{ textAlign: 'left', padding: '4px' }}>
+            {/* <div style={{ textAlign: 'left', padding: '4px' }}>
                 <div style={{ fontSize: '1.2em', padding: '0px 0px 0px 10px' }}>Alerts</div>
-            </div>
+            </div> */}
         </div>
     )
 };
