@@ -23,7 +23,7 @@ const MarketWatch = (props) => {
     return (
         <div style={{ display: 'grid', gridTemplateColumns: '75fr 25fr' }}>
             <div style={{ textAlign: 'left', padding: '4px' }}>
-                <div style={{ fontSize: '1.2em', padding: '0px' }}>Market Watch</div>
+                <div style={{ fontSize: '1.2em', padding: '0px 0px 0px 10px' }}>Market Watch</div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '4px', margin: '4px' }}>
                     {marketWatchInstruments.map((i) => (
                         <MarketWatchInstrument key={i.instrument} instrument={i.instrument}></MarketWatchInstrument>
@@ -31,7 +31,7 @@ const MarketWatch = (props) => {
                 </div>
             </div>
             <div style={{ textAlign: 'left', padding: '4px' }}>
-                <div style={{ fontSize: '1.2em', padding: '0px' }}>Alerts</div>
+                <div style={{ fontSize: '1.2em', padding: '0px 0px 0px 10px' }}>Alerts</div>
             </div>
         </div>
     )
